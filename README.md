@@ -2,7 +2,7 @@
 
 This a small C++ project derived from a bigger ongoing project of mine. 
 
-FolderSize is a lightweight tool for quick folder size measurement.
+FolderSize is a lightweight tool for folder size measurement aimed at reaching tremendous speeds.
 
 ## Usage
 ``FolderSize [Path]``
