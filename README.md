@@ -23,4 +23,5 @@ You can build this project yourself in Visual Studio, with the following project
 ### Others
 
 In every case `c++17` standard is **necessary**
-G++ Example: `g++ -std=c++17 FolderSizeV2.cpp -o FolderSize`
+
+G++ Example: `g++ -std=c++17 FolderSize.cpp -o FolderSize`
