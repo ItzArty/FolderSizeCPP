@@ -26,19 +26,21 @@ int main( int argc, char** args ) {
 
 	}
 
+	recursive_directory_iterator& increment(error_code & ec) noexcept;
+
 	unsigned long long totalSize = 0;
 
 	steady_clock::time_point start = steady_clock::now();
 
-	for ( auto const& dir_entry : recursive_directory_iterator(target, directory_options::skip_permission_denied) ) {
+	for ( auto& dir_entry : recursive_directory_iterator( target, directory_options::skip_permission_denied ) ) {
 
 		try {
 
-			if (!dir_entry.is_directory()) totalSize += dir_entry.file_size();
+			if (dir_entry.is_regular_file()) totalSize += dir_entry.file_size();
 
-		} catch (exception& e) {
+		} catch ( exception& e ) {
 
-			cout << e.what() << endl;
+			cout << e.what() << "\n";
 
 		}
 
@@ -47,7 +49,7 @@ int main( int argc, char** args ) {
 	steady_clock::time_point end = steady_clock::now();
 
 	cout << "Path evaluated: " << target.string() << endl;
-	cout << "Total size: " << ( totalSize / ( 1024 * 1024 ) ) << "MB" << endl;
+	cout << "Total size: " << (totalSize / (1024 * 1024)) << "MB" << endl;
 	cout << "Time elapsed: " << duration_cast<milliseconds>(end - start).count() << "ms" << endl;
 
 	return 0;
