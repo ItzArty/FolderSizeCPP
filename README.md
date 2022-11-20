@@ -4,14 +4,16 @@ This a small C++ project derived from a bigger ongoing project of mine.
 
 FolderSize is a lightweight tool for folder size measurement aimed at reaching tremendous speeds.
 
-#### It doesn't get faster than this :)
-
 ## Usage
 ``FolderSize [Path]``
 
 ## Notice
 
-Folder which the program does not have permission to access will be skipped.
+- Folder which the program does not have permission to access will be skipped.
+
+- Windows is significantly slower when compared against Linux on the same hardware, expect up to **500%** higher speed coming from Windows to Linux
+
+- **As far as I am aware, this solution reaches the lowest possible evaluation time, even switching to a lighter language like C no longer yields better results.**
 
 ## Building
 
