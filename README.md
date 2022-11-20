@@ -4,6 +4,8 @@ This a small C++ project derived from a bigger ongoing project of mine.
 
 FolderSize is a lightweight tool for folder size measurement aimed at reaching tremendous speeds.
 
+#### It doesn't get faster than this :)
+
 ## Usage
 ``FolderSize [Path]``
 
