@@ -9,7 +9,7 @@ FolderSize is a lightweight tool for folder size measurement aimed at reaching t
 
 ## Notice
 
-- Folder which the program does not have permission to access will be skipped.
+- A folder which the program does not have permission to access will be skipped over.
 
 - Windows is significantly slower when compared against Linux on the same hardware, expect up to **500%** higher speed coming from Windows to Linux
 
